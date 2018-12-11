@@ -1,0 +1,32 @@
+package com.hospital.is.model;
+
+import java.util.List;
+
+public class MedicalFolder {
+
+	private List<Disease> diseaseList;
+
+	/**
+	 * @return the diseaseList
+	 */
+	public List<Disease> getDiseaseList() {
+		return diseaseList;
+	}
+
+	/**
+	 * @param diseaseList the diseaseList to set
+	 */
+	public void setDiseaseList(List<Disease> diseaseList) {
+		this.diseaseList = diseaseList;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "MedicalFolder [diseaseList=" + diseaseList + "]";
+	}
+	
+	
+}

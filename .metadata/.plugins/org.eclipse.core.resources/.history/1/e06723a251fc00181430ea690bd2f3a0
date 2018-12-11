@@ -1,0 +1,36 @@
+package com.hospital.is.service.impl;
+
+import java.util.Collections;
+import java.util.List;
+
+import com.hospital.is.StaticDatabase;
+import com.hospital.is.model.Patient;
+import com.hospital.is.service.PatientService;
+
+public class PatientServiceImpl implements PatientService {
+
+	@Override
+	public Patient create(Patient patient) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Patient> getAll() {
+		Collections.sort(StaticDatabase.getPatientList());
+		return StaticDatabase.getPatientList();
+	}
+
+	@Override
+	public Patient getById(long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Patient update(Patient patient, long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

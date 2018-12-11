@@ -1,0 +1,5 @@
+package com.hospital.is.service;
+
+public class PatientService {
+
+}

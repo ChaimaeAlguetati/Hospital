@@ -1,0 +1,11 @@
+package com.hospital.is.converter;
+
+public class PatientConverter {
+	public PatientDTO converterToDTO(Patient p) {
+		
+	}
+
+public Patient converterToEntity(PatientDTO p) {
+		
+	}
+}

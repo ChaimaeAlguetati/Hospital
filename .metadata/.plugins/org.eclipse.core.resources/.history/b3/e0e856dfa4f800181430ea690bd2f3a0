@@ -1,0 +1,22 @@
+package com.everis.pack01;
+
+public class Disease {
+    String DiseaseName;
+
+    
+
+    public String getDiseaseName() {
+
+                   return DiseaseName;
+
+    }
+
+
+
+    public void setDiseaseName(String diseaseName) {
+
+                   DiseaseName = diseaseName;
+
+    }
+
+}

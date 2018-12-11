@@ -1,0 +1,39 @@
+package com.hospital.is.converter;
+
+import com.hospital.is.entity.Patient;
+import com.hospital.is.model.PatientDTO;
+
+public class PatientConverter {
+	
+public PatientDTO convertFirstNameToDTO(Patient p) 
+{
+	PatientDTO dto=new PatientDTO();
+		dto.setFirstName(p.getFirstName());
+		return dto;
+	}
+
+public Patient convertFirstNameToEntity(PatientDTO dto) {
+	Patient p=new Patient();
+	p.setFirstName(dto.getFirstName());
+	return p;
+		
+	}
+public PatientDTO convertLastNameToDTO(Patient p) 
+{
+	PatientDTO dto=new PatientDTO();
+		dto.setLastName(p.getLastName());
+		return dto;
+	}
+public Patient convertLastNameToEntity(PatientDTO dto) {
+	Patient p=new Patient();
+	p.setLastName(dto.getLastName());
+	return p;
+		
+	}
+public PatientDTO convertAddressToDTO(Patient p) 
+{
+	PatientDTO dto=new PatientDTO();
+		dto.setAddress(p.getAddress());
+		return dto;
+	}
+}

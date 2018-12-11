@@ -1,0 +1,65 @@
+package com.hospital.is;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.hospital.is.model.Disease;
+import com.hospital.is.model.MedicalFolder;
+import com.hospital.is.model.Patient;
+import com.hospital.is.service.PatientService;
+import com.hospital.is.service.impl.PatientServiceImpl;
+
+public class StaticDatabase {
+
+	/**
+	 * @return the diseaseList
+	 */
+	public static List<Disease> getDiseaseList() {
+		List<Disease> diseaseList = new ArrayList<>();
+
+		Disease disease = new Disease();
+		disease.setNature("gastro");
+		disease.setDescription("gastro description");
+		disease.setDiagDate("06/12/2018");
+
+		diseaseList.add(disease);
+
+		return diseaseList;
+	}
+
+	/**
+	 * @return the medicalFolderList
+	 */
+	public static List<MedicalFolder> getMedicalFolderList() {
+		List<MedicalFolder> medicalFolderList = new ArrayList<>();
+
+		MedicalFolder medicalFolder = new MedicalFolder();
+
+		medicalFolder.setDiseaseList(getDiseaseList());
+
+		medicalFolderList.add(medicalFolder);
+
+		return medicalFolderList;
+	}
+
+	/**
+	 * @return the patientList
+	 */
+	public static List<Patient> getPatientList() {
+		List<Patient> patientList = new ArrayList<>();
+
+		PatientService patient= new PatientServiceImpl();
+		patientList=patient.getAll();
+
+
+		Map<String, Patient> map = new HashMap<>();
+		for (Patient patient1 : patientList) {
+
+		map.put(patient1.getLastName() + patient1.getFirstName(), patient1);
+
+		return patientList;
+	}
+
+}

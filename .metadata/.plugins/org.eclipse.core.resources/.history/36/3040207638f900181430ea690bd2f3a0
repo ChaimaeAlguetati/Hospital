@@ -1,0 +1,18 @@
+package com.everis.pack01;
+
+import java.util.ArrayList;
+import java.util.Date;
+
+public class Person {
+	
+	String  firstName;
+
+    String lastName;
+
+    String phoneNumber;
+
+    String Address;
+
+    Date BirthDate;
+
+}

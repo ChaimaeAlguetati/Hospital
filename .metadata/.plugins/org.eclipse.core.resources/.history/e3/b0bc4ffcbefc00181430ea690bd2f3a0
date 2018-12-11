@@ -1,0 +1,7 @@
+package com.hospital.is.entity;
+
+
+public class Database<T> {
+
+
+}

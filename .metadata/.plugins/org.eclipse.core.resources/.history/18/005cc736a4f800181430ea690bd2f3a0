@@ -1,0 +1,18 @@
+package com.everis.pack01;
+
+public class Patient {
+	 String Cin;
+
+     String firstName,lastName,phoneNumber,Gender, Adresse;
+
+     String FamilyStatut;
+
+     String InsuranceType;
+
+     String InsuranceCode;
+
+     Date BirthDate;
+
+    
+
+}

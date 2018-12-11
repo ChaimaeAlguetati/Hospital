@@ -1,0 +1,37 @@
+package com.everis.pack01;
+
+import java.util.ArrayList;
+import java.util.Date;
+
+public class PatientServices {
+	Patient p=new Patient();
+	public void createPatient(){}
+
+    
+
+    public void readPatient(String Cin,String firstName,String lastName,String phoneNumber,String Gender,String Adresse,String FamilyStatut,String InsuranceType,String InsuranceCode,Date BirthDate, ArrayList<Disease> DiseasList){
+    	System.out.println("Les informations du patient:");
+    	System.out.println("Numero de la carte nationale:" +Cin);
+    	System.out.println("Nom complet:" +firstName+" "+lastName);
+    	System.out.println("Numero de telephone:" +phoneNumber);
+    	System.out.println("la patient est un:" +Gender);
+    	System.out.println("L'adresse:" +Adresse);
+    	System.out.println("La situation familiale:" +FamilyStatut);
+    	System.out.println("Type de l'assurance:" +InsuranceType);
+    	System.out.println("code de l'assurance:" +InsuranceCode);
+    	System.out.println("Date de naissance:" + BirthDate);
+    	System.out.println("Les maladies" +DiseasList);
+
+    }
+
+   
+
+    public void updatePatient(){}
+
+   
+
+   
+
+    public void deletePatient(){}
+
+}

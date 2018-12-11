@@ -1,0 +1,71 @@
+package com.hospital.is;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.hospital.is.model.Disease;
+import com.hospital.is.model.MedicalFolder;
+import com.hospital.is.model.Patient;
+import com.hospital.is.service.PatientService;
+
+
+public class StaticDatabase {
+
+	/**
+	 * @return the diseaseList
+	 */
+	public static List<Disease> getDiseaseList() {
+		List<Disease> diseaseList = new ArrayList<>();
+
+		Disease disease = new Disease();
+		disease.setNature("gastro");
+		disease.setDescription("gastro description");
+		disease.setDiagDate("06/12/2018");
+
+		diseaseList.add(disease);
+
+		return diseaseList;
+	}
+
+	/**
+	 * @return the medicalFolderList
+	 */
+	public static List<MedicalFolder> getMedicalFolderList() {
+		List<MedicalFolder> medicalFolderList = new ArrayList<>();
+
+		MedicalFolder medicalFolder = new MedicalFolder();
+
+		medicalFolder.setDiseaseList(getDiseaseList());
+
+		medicalFolderList.add(medicalFolder);
+
+		return medicalFolderList;
+	}
+
+	/**
+	 * @return the patientList
+	 */
+	public static List<Patient> getPatientList() {
+		List<Patient> patientList = new ArrayList<>();
+
+		Patient patient = new Patient();
+
+		patient.setMedicalFolder(getMedicalFolderList().get(0));
+		patient.setFirstName("Prénom premier patient22");
+		patient.setLastName("Nom premier patient");
+		patient.setAddress("30 rue soulaimane achaairi, 20500, Tetouan Maroc");
+		patient.setBirthDate("01/01/1970");
+		patient.setPhone("+212 6 66 77 88 99");
+		Map<Integer, Patient> map = new HashMap<>();
+
+		patientList.add(patient);
+for(int i=0; i<patientList.size();i++) {
+
+		map.put(i+1, patientList.get(i));
+
+	}
+return patientList;
+
+}}

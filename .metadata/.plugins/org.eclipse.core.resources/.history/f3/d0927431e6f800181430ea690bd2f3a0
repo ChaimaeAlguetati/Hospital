@@ -1,0 +1,20 @@
+package com.everis.pack01;
+
+public class PatientServices {
+	public void createPatient(){}
+
+    
+
+    public void readPatient(){}
+
+   
+
+    public void updatePatient(){}
+
+   
+
+   
+
+    public void deletePatient(){}
+
+}
